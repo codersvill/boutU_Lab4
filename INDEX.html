@@ -31,7 +31,7 @@ $Age = $_REQUEST['age_field'];
         <h2> Volunteer Form </h2>
             <form method ="POST" action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php">
                 <fieldset>
-                    <h3> About You </h3>
+                    <h3> Personal Information </h3>
                         <div>
                             <label> First Name:
                                 <input type ="text" name = "first_name_field" placeholder="First Name"></label>
@@ -78,38 +78,28 @@ $Age = $_REQUEST['age_field'];
                               <label> OVER 65 YEARS OLD  </label>                                     
                         </div>
                         
-                                
-        <p> This page will display the results of the form that was submitted to it. </p>
-    </div>
-    <hr><br>
-    <h1> Thank you for your ITMD-361 form submission, <?php echo htmlentities($firstName) ?>!</h1>
-    <div class="box">
-    <h2> This section contains the information provided in the my info section: <h2>
-        <p><strong>First Name:</strong> <?php echo htmlentities($firstName) ?></p>
-        <p><strong>Last Name:</strong> <?php echo htmlentities($lastName) ?></p>
-        <p><strong>Phone Number:</strong> <?php echo htmlentities($phone) ?></p>
-        <p><strong>eMail Address:</strong> <?php echo htmlentities($email) ?></p>
-        <p><strong>Gender:</strong> <?php echo htmlentities($gender) ?></p>
-        <p><strong>Age:</strong> <?php echo htmlentities($age) ?></p>
-    </div>
-    <div class="box">
-    <h2> This section contains the information provided in the availibility section:<h2>
-    <h3> Days Selected as Available:</h3>
-    <? php
-        if (is_array($available)){
-            foreach ($available as $ckvalue) {
-                echo ('<p>' . htmlentities($ckvalue) . '</p>');
-                }
-        } else {
-            echo ( '<p>' . htmlentities($available) . '</p>');
-        }
-   ?>
-   <h3>Comments:</h3>
-   <p><?php echo n12br(htmlentities($comments)) ?></p>
-   </div>
-   <div class="box">
-   <h2>This section contains the hidden information:</h2>
-      <p><strong>HTML Form created by: </strong> <?php echo htmlentities($hidden) ?</p>
-   </div>
-</body>
+        <h2> My Availablity </p>
+        <p><strong> Prefer to Work Days </strong></p>
+        <div>
+            <input type="checkbox" id="SUNDAY" name="SUNDAY" value="SUNDAY">
+                <label for="SUNDAY"> SUN </label><br>
+            <input type="checkbox" id="MONDAY" name="MONDAY" value="MONDAY">
+                <label for="MONDAY"> MON </label><br>
+            <input type="checkbox" id="TUESDAY" name="TUESDAY" value="TUESDAY">
+                <label for="TUESDAY"> TUE </label><br>                                                
+            <input type="checkbox" id="WEDNESDAY" name="WEDNESDAY" value="WEDNESDAY">
+                <label for="WEDNESDAY"> WED </label><br>
+            <input type="checkbox" id="THURSDAY" name="THURSDAY" value="THURSDAY">
+                <label for="THURSDAY"> THU </label><br>                                                
+            <input type="checkbox" id="FRIDAY" name="FRIDAY" value="FRIDAY">
+                <label for="FRIDAY"> FRI </label><br>                     
+            <input type="checkbox" id="SATURDAY" name="SATURDAY" value="SATURDAY">
+                <label for="SATURDAY"> SAT </label><br>                          
+       </div>
+       <label for = "COMMENTS">Any Comments?</label>
+       <textarea name="comments_field" id="comments" placeholder="comments"></textarea> 
+      </fieldset>
+    <input type="hidden" name="hidden field" value="woh1@hawk.iit.edu" > 
+    <input type ="submit" value="SEND ME">
+    </body>
 </html>

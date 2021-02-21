@@ -44,22 +44,18 @@
                     </div>
                     <div>
                 <h3> Age </he>
-                    <div>
-                        <input type ='radio' name = "age_field" value = "0+"
-                            <label> UNDER 18 YEARS OLD </label>
-                         <input type ='radio' name = "age_field" value = "18-24"
-                            <label> 18 ~ 24 YEARS OLD  </label>    
-                         <input type ='radio' name = "age_field" value = "25-34"
-                            <label> 25 ~ 34 YEARS OLD  </label>                                
-                         <input type ='radio' name = "age_field" value = "35-44"
-                            <label> 35 ~ 44 YEARS OLD  </label>
-                         <input type ='radio' name = "age_field" value = "45-54"
-                            <label> 45 ~ 54 YEARS OLD  </label>                                    
-                         <input type ='radio' name = "age_field" value = "55-64"
-                            <label> 55 ~ 64 YEARS OLD  </label>
-                         <input type ='radio' name = "age_field" value = "65+"
-                            <label> OVER 65 YEARS OLD  </label>                                     
-                   </div>
+                    <foem action="/action_page.php">
+                        <label for="age">Age :</label>
+                        <select names ="age" id="age">
+                            <optgroup LABEL = >
+                                <option value = "0+">UNDER 18 YEARS OLD</option>
+                                <option value = "18~">18~24 YEARS OLD</option>
+                                <option value = "25~">25~34 YEARS OLD</option>
+                                <option value = "35~">35~44 YEARS OLD</option>
+                                <option value = "45~">45~54 YEARS OLD</option>
+                                <option value = "55~">55~64 YEARS OLD</option>
+                                <option value = "65~">OVER 65 YEARS OLD</option>
+                            </optgroup>
                         
     <h2> My Availablity </p>
         <p><strong> Prefer to Work Days </strong></p>

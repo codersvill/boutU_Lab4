@@ -20,17 +20,13 @@
                     <div>
                         <label> First Name:
                             <input type ="text" name = "first_name_field" placeholder="First Name"></label>
-                    </div>
-                    <div>
                         <label> Last Name:
                             <input type ="text" name = "last_name_field" placeholder="Last Name"></label>
                     </div>
                     <div>
-                        <label> Cell Phone:
+                        <label> Cell Phone Number :
                             <input type ="text" name = "phone_field" placeholder="Cell Phone"></label>
-                    </div>
-                    <div>
-                        <label> eMail address:
+                        <label> eMail :
                             <input type ="text" name = "email_field" placeholder="eMail Address"></label>
                     </div>
                     <div>
@@ -46,7 +42,7 @@
                     <foem action="/action_page.php">
                         <label for="age">Age :</label>
                         <select names ="age" id="age">
-                            <optgroup LABEL = ARE YOU STILL YOUNG ? >
+                            <optgroup LABEL = "ARE YOU STILL YOUNG ?" >
                                 <option value = "0+">UNDER 18 YEARS OLD</option>
                                 <option value = "18~">18~24 YEARS OLD</option>
                                 <option value = "25~">25~34 YEARS OLD</option>
@@ -57,8 +53,9 @@
                             </optgroup>
                    </div>
              </fieldset>
+        <form method ="POST" action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php">
              <fieldset>
-                <h2> My Availablity </p>
+				<h2> My Availablity </h2>
                 <p><strong> Prefer to Work Days </strong></p>
                 <div>
                 <input type="checkbox" id="SUNDAY" name="SUNDAY" value="SUNDAY">
@@ -77,9 +74,9 @@
                 <label for="SATURDAY"> SAT </label><br>                          
                 </div>
        <label for = "COMMENTS">Any Comments?</label>
-       <textarea name="comments_field" id="comments" placeholder="comments"></textarea> 
+       <textarea name="comments_field" id="comments" placeholder="Anything to Add?"></textarea> 
       </fieldset>
     <input type="hidden" name="hidden field" value="woh1@hawk.iit.edu" > 
     <input type ="submit" value="SEND ME">
-    </body>
+ </body>
 </html>

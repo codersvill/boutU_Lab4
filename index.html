@@ -1,10 +1,10 @@
 <?php
 
-//Make short Variable manes
-$FirstName = $_REQUEST['first name field'];
+//Make short Variable names
+$FirstName = $_REQUEST['first_name_field'];
 $LastName = $_REQUEST['last_name_field'];
-$Phone = $_REQUEST['phone field'];
-$eMail = $_REQUEST['email field'];
+$Phone = $_REQUEST['phone_field'];
+$eMail = $_REQUEST['email_field'];
 $Hidden = $_REQUEST['hidden_field];
 $Comments = $_REQUEST['comments_field];
 $Gender = $_REQUEST['gender_field];
@@ -16,7 +16,7 @@ $Age = $_REQUEST['age_field'];
 <html lang = 'en'>
 <head>
   <meta charset = "UTF-8">
-  <title> ITMD-361 Lab3 Form Processing Script </title>
+  <title> ITMD-361 Lab4 Form Processing Script </title>
     <style>
     .box { 
           border: 1px solid #444;
@@ -28,17 +28,17 @@ $Age = $_REQUEST['age_field'];
 </head>
 <body>
     <div style='text-align:center;">
-        <h2>ITMD-361 Lab 3 Form Processing Script </h2>
+        <h2>ITMD-361 Lab 4 Form Processing Script </h2>
         <p> This page will display the results of the form that was submitted to it. </p>
     </div>
     <hr><br>
     <h1> Thank you for your ITMD-361 form submission, <?php echo htmlentities($firstName) ?>!</h1>
     <div class="box">
     <h2> This section contains the information provided in the my info section: <h2>
-        <p><strong>First Name:</strong> <?php echo htmlentities($firstName) ? ></p>
+        <p><strong>First Name:</strong> <?php echo htmlentities($firstName) ?></p>
         <p><strong>Last Name:</strong> <?php echo htmlentities($lastName) ?></p>
         <p><strong>Phone Number:</strong> <?php echo htmlentities($phone) ?></p>
-        <p><strong>eMail Address:</stong> <?php echo htmlentities($email) ?></p>
+        <p><strong>eMail Address:</strong> <?php echo htmlentities($email) ?></p>
         <p><strong>Gender:</strong> <?php echo htmlentities($gender) ?></p>
         <p><strong>Age:</strong> <?php echo htmlentities($age) ?></p>
     </div>
@@ -51,10 +51,10 @@ $Age = $_REQUEST['age_field'];
                 echo ('<p>' . htmlentities($ckvalue) . '</p>');
                 }
         } else {
-            echo ( <'<p>' . htmlentities($available) . '</p>');
+            echo ( '<p>' . htmlentities($available) . '</p>');
         }
    ?>
-   <h3>comments:</h3>
+   <h3>Comments:</h3>
    <p><?php echo n12br(htmlentities($comments)) ?></p>
    </div>
    <div class="box">
@@ -63,6 +63,3 @@ $Age = $_REQUEST['age_field'];
    </div>
 </body>
 </html>
-    
-    
-    

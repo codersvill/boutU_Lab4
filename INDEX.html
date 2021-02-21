@@ -1,0 +1,115 @@
+<?php
+
+//Make short Variable names
+$FirstName = $_REQUEST['first_name_field'];
+$LastName = $_REQUEST['last_name_field'];
+$Phone = $_REQUEST['phone_field'];
+$eMail = $_REQUEST['email_field'];
+$Hidden = $_REQUEST['hidden_field];
+$Comments = $_REQUEST['comments_field];
+$Gender = $_REQUEST['gender_field];
+$Available = $_REQUEST['available_field'];
+$Age = $_REQUEST['age_field'];
+
+?>
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+  <meta charset = "UTF-8">
+  <title> ITMD-361 Lab4 Form Processing Script </title>
+    <style>
+    .box { 
+          border: 1px solid #444;
+          background-color: #ccc;
+          margin: 20px 20px;
+          padding: 5px 20px;
+          }
+  </style>
+</head>
+<body>
+    <div style='text-align:center;">
+        <h2> Volunteer Form </h2>
+            <form method ="POST" action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php">
+                <fieldset>
+                    <h3> About You </h3>
+                        <div>
+                            <label> First Name:
+                                <input type ="text" name = "first_name_field" placeholder="First Name"></label>
+                        </div>
+                        <div>
+                            <label> Last Name:
+                                <input type ="text" name = "last_name_field" placeholder="Last Name"></label>
+                        </div>
+                        <div>
+                            <label> Cell Phone:
+                                <input type ="text" name = "phone_field" placeholder="Cell Phone"></label>
+                        </div>
+                        <div>
+                            <label> eMail address:
+                                <input type ="text" name = "email_field" placeholder="eMail Address"></label>
+                        </div>
+                        <div>
+                            <h3> Gender:</h3>
+                        </div>
+                        <div>
+                            <input type ='radio' name ="gender_field" value = "m">
+                                <label> Male </label>
+                            <input type ='radio' name ="gender_field" value = "F">
+                                <label> Female </label>                                
+                             <input type ='radio' name ="gender_field" value = "n/a">
+                                <label> Prefered Not To Answer </label>                                      
+                        </div>
+                        <div>
+                            <h3> Age </he>
+                        <div>
+                            <input type ='radio' name = "age_field" value = "0+"
+                                <label> UNDER 18 YEARS OLD </label>
+                            <input type ='radio' name = "age_field" value = "18-24"
+                                <label> 18 ~ 24 YEARS OLD  </label>    
+                            <input type ='radio' name = "age_field" value = "25-34"
+                                <label> 25 ~ 34 YEARS OLD  </label>                                
+                            <input type ='radio' name = "age_field" value = "35-44"
+                              <label> 35 ~ 44 YEARS OLD  </label>
+                            <input type ='radio' name = "age_field" value = "45-54"
+                              <label> 45 ~ 54 YEARS OLD  </label>                                    
+                            <input type ='radio' name = "age_field" value = "55-64"
+                              <label> 55 ~ 64 YEARS OLD  </label>
+                            <input type ='radio' name = "age_field" value = "65+"
+                              <label> OVER 65 YEARS OLD  </label>                                     
+                        </div>
+                        
+                                
+        <p> This page will display the results of the form that was submitted to it. </p>
+    </div>
+    <hr><br>
+    <h1> Thank you for your ITMD-361 form submission, <?php echo htmlentities($firstName) ?>!</h1>
+    <div class="box">
+    <h2> This section contains the information provided in the my info section: <h2>
+        <p><strong>First Name:</strong> <?php echo htmlentities($firstName) ?></p>
+        <p><strong>Last Name:</strong> <?php echo htmlentities($lastName) ?></p>
+        <p><strong>Phone Number:</strong> <?php echo htmlentities($phone) ?></p>
+        <p><strong>eMail Address:</strong> <?php echo htmlentities($email) ?></p>
+        <p><strong>Gender:</strong> <?php echo htmlentities($gender) ?></p>
+        <p><strong>Age:</strong> <?php echo htmlentities($age) ?></p>
+    </div>
+    <div class="box">
+    <h2> This section contains the information provided in the availibility section:<h2>
+    <h3> Days Selected as Available:</h3>
+    <? php
+        if (is_array($available)){
+            foreach ($available as $ckvalue) {
+                echo ('<p>' . htmlentities($ckvalue) . '</p>');
+                }
+        } else {
+            echo ( '<p>' . htmlentities($available) . '</p>');
+        }
+   ?>
+   <h3>Comments:</h3>
+   <p><?php echo n12br(htmlentities($comments)) ?></p>
+   </div>
+   <div class="box">
+   <h2>This section contains the hidden information:</h2>
+      <p><strong>HTML Form created by: </strong> <?php echo htmlentities($hidden) ?</p>
+   </div>
+</body>
+</html>

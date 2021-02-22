@@ -23,7 +23,6 @@
                         &emsp;&emsp; <label> Last Name:
                             <input type ="text" name = "last_name_field" placeholder="Family Name"></label>
                     </div>
-		     </form>
                     <div>
                         <label> Contact #:
                             <input type ="text" name = "phone_field" placeholder="Cell Phone"></label>
@@ -39,6 +38,7 @@
                         <input type ='radio' name ="gender_field" value = "n/a">
                             <label> Prefered Not To Answer </label>                                      
                     </div>
+		    </form>
                     <div>
 			<form action="/action_page.php"> 
                         <label for="age">Age :</label>
@@ -61,6 +61,15 @@
 		     <div>
                 	<strong><label> Prefer to Work Days </label></strong>
                      </div>
+		      <div>
+		<label>SHIFT </label> &ensp;&ensp;&ensp;&ensp;&ensp;
+		<input type="checkbox" id="DAY" name="available_field[]" value="DAY">
+                <label for="DAY"> DAY TIME (06:00 ~ 14:00) </label>
+		<input type="checkbox" id="MID" name="available_field[]" value="MID">
+	        <label for="MID"> MID TIME (14:00 ~ 22:00) </label>
+		<input type="checkbox" id="NIGHT" name="available_field[]" value="NIGHT">
+                <label for="NIGHT"> NIGHT TIME (22:00 ~ 06:00) </label>
+		     </div>
 		     <div>
                 <label> WEEKDAYS </label>
                 <input type="checkbox" id="MONDAY" name="available_field[]" value="MONDAY">
@@ -80,15 +89,6 @@
                 <label for="SATURDAY"> SAT </label>
                 <input type="checkbox" id="SUNDAY" name="available_field[]" value="SUNDAY">
                 <label for="SUNDAY"> SUN </label>
-		     </div>
-		     <div>
-		<label>SHIFT </label> &ensp;&ensp;&ensp;&ensp;&ensp;
-		<input type="checkbox" id="DAY" name="available_field[]" value="DAY">
-                <label for="DAY"> DAY TIME (06:00 ~ 14:00) </label>
-		<input type="checkbox" id="MID" name="available_field[]" value="MID">
-	        <label for="MID"> MID TIME (14:00 ~ 22:00) </label>
-		<input type="checkbox" id="NIGHT" name="available_field[]" value="NIGHT">
-                <label for="NIGHT"> NIGHT TIME (22:00 ~ 06:00) </label>
 		     </div>
 	     </fieldset>
              <fieldset>

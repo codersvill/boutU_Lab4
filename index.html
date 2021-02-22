@@ -73,8 +73,8 @@
                 <label for="FRIDAY"> FRI </label>  
 		     </div>
 		     <div>
-		<input type="WEEKDAYS" id="WEEKDAYS" name="available_field[]" value="WEEKDAYS">
-			     <label for="WEEKDAYS"> WEEKEND </label>
+		<input type="WEEKEND" id="WEEKEND" name="available_field[]" value="WEEKEND">
+	        <label for="WEEKEND"> WEEKEND </label>
                 <input type="checkbox" id="SATURDAY" name="available_field[]" value="SATURDAY">
                 <label for="SATURDAY"> SAT </label>
                 <input type="checkbox" id="SUNDAY" name="available_field[]" value="SUNDAY">
@@ -83,12 +83,12 @@
 		     <div>
 		<input type="SHIFT" id="SHIFT" name="available_field[]" value="SHIFT">
                 <label for="SHIFT"> SHIFT </label>
-		<input type="DAY" id="DAY" name="available_field[]" value="DAY">
-                <label for="DAY"> DAY(6~14) </label>
-		<input type="MID" id="MID" name="available_field[]" value="MID">
-	        <label for="MID"> MID(14~22) </label>
-		<input type="NIGHT" id="NIGHT" name="available_field[]" value="NIGHT">
-                <label for="NIGHT"> NIGHT(22~6) </label>
+		<input type="checkbox" id="DAY" name="available_field[]" value="DAY">
+                <label for="DAY"> DAY TIME (06:00 ~ 14:00) </label>
+		<input type="checkbox" id="MID" name="available_field[]" value="MID">
+	        <label for="MID"> MID TIME (14:00 ~ 22:00) </label>
+		<input type="checkbox" id="NIGHT" name="available_field[]" value="NIGHT">
+                <label for="NIGHT"> NIGHT TIME (22:00 ~ 06:00) </label>
 		     </div>
        <label for = "COMMENTS">Any Comments?</label>
        <textarea name="comments_field" id="comments" placeholder="Anything to Add?"></textarea> 

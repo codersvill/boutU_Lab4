@@ -16,7 +16,7 @@
     <h1> Volunteer Form </h1>
         <form method ="POST" action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php">
             <fieldset>
-                <h2> Personal Information </h2>
+                <legend><h2> Personal Information </h2></legend>
                     <div>
                         <label> First Name:
                             <input type ="text" name = "first_name_field" placeholder="Given Name"></label>
@@ -53,26 +53,27 @@
                             </optgroup>
                    </div>
              </fieldset>
-        <form method ="POST" action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php">
              <fieldset>
-				<h2> My Availablity </h2>
-                <p><strong> Prefer to Work Days </strong></p>
-                <div>
+		     <legend><h2> My Availablity </h2></legend>
+		     <div>
+                	<strong><label> Prefer to Work Days </label></strong>
+                     </div>
+		     <div>
                 <input type="checkbox" id="SUNDAY" name="SUNDAY" value="SUNDAY">
-                <label for="SUNDAY"> SUN </label><br>
+                <label for="SUNDAY"> SUN </label>
                 <input type="checkbox" id="MONDAY" name="MONDAY" value="MONDAY">
-                <label for="MONDAY"> MON </label><br>
+                <label for="MONDAY"> MON </label>
                 <input type="checkbox" id="TUESDAY" name="TUESDAY" value="TUESDAY">
-                <label for="TUESDAY"> TUE </label><br>                                                
+                <label for="TUESDAY"> TUE </label>                                                
                 <input type="checkbox" id="WEDNESDAY" name="WEDNESDAY" value="WEDNESDAY">
-                <label for="WEDNESDAY"> WED </label><br>
+                <label for="WEDNESDAY"> WED </label>
                 <input type="checkbox" id="THURSDAY" name="THURSDAY" value="THURSDAY">
-                <label for="THURSDAY"> THU </label><br>                                                
+                <label for="THURSDAY"> THU </label>                                                
                 <input type="checkbox" id="FRIDAY" name="FRIDAY" value="FRIDAY">
-                <label for="FRIDAY"> FRI </label><br>                     
+                <label for="FRIDAY"> FRI </label>                     
                 <input type="checkbox" id="SATURDAY" name="SATURDAY" value="SATURDAY">
-                <label for="SATURDAY"> SAT </label><br>                          
-                </div>
+                <label for="SATURDAY"> SAT </label>                          
+                     </div>
        <label for = "COMMENTS">Any Comments?</label>
        <textarea name="comments_field" id="comments" placeholder="Anything to Add?"></textarea> 
       </fieldset>
